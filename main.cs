@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 
 class MainClass {
-  public static void Main () {  
-    /*o que fazer ?  fazer um meio de cadastro de produtos de uma loja que ficaram salvo em uma lista*/
+  public static void Main () {
+    
     List<produto> Lista_produto = new List<produto>();
     string cadastrar = "S";
     int novo = 0;
@@ -32,10 +32,11 @@ class MainClass {
         Lista_produto.Add(desconhecido);         
       }
     }
-    for (int i = 0; i<Lista_produto.count; i++){
-      Console.WriteLine("NOME----LOCAL----QUANT----CATE");
-      for (int j = 0; j<Lista_produto.count; j++){
-        
+    for (int i = 0; i<Lista_produto.Count; i++){
+      Console.WriteLine("Indice--NOME--LOCAL--QUANT--CATE");
+      for (int j = 0; j<Lista_produto.Count; j++){
+        Console.WriteLine($"{j}---{Lista_produto[j].Getnomeproduto()}--{Lista_produto[j].Getlocal()}--{Lista_produto[j].Getqntdproduto()}---{Lista_produto[j].Getcategoria()}");
+
       }
     }
 
